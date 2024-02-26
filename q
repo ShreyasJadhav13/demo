@@ -1,0 +1,513 @@
+[33mtag v1.1[m
+Tagger: ShreyasJadhav13 <shreyasjadhav1313@gmail.com>
+Date:   Mon Feb 26 13:47:41 2024 +0530
+
+Tag for file First.txt
+
+[33mcommit 1995bf0295df42c473111f8f4a4aea98fd2c4e5e[m[33m ([m[1;33mtag: v1.1[m[33m, [m[1;33mtag: v1.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/feature-a[m[33m, [m[1;32mmaster[m[33m, [m[1;32mfeature-a[m[33m)[m
+Author: ShreyasJadhav13 <shreyasjadhav1313@gmail.com>
+Date:   Mon Feb 26 12:23:15 2024 +0530
+
+    everything
+
+[1mdiff --git a/.bash_history b/.bash_history[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d043cf1[m
+[1m--- /dev/null[m
+[1m+++ b/.bash_history[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32mpasswd[m
+[32m+[m[32msu shreyas[m
+[32m+[m[32msu shreyas[m
+[32m+[m[32msudo -s[m
+[32m+[m[32msudo useradd omkar[m
+[32m+[m[32msudo id omkar[m
+[32m+[m[32msudo passwd omkar[m
+[32m+[m[32msu omkar[m
+[32m+[m[32msu shreyas[m
+[32m+[m[32msu shreyas[m
+[32m+[m[32msudo -i[m
+[1mdiff --git a/.bashrc b/.bashrc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f6939ee[m
+[1m--- /dev/null[m
+[1m+++ b/.bashrc[m
+[36m@@ -0,0 +1,99 @@[m
+[32m+[m[32m# ~/.bashrc: executed by bash(1) for non-login shells.[m
+[32m+[m[32m# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)[m
+[32m+[m[32m# for examples[m
+[32m+[m
+[32m+[m[32m# If not running interactively, don't do anything[m
+[32m+[m[32m[ -z "$PS1" ] && return[m
+[32m+[m
+[32m+[m[32m# don't put duplicate lines in the history. See bash(1) for more options[m
+[32m+[m[32m# ... or force ignoredups and ignorespace[m
+[32m+[m[32mHISTCONTROL=ignoredups:ignorespace[m
+[32m+[m
+[32m+[m[32m# append to the history file, don't overwrite it[m
+[32m+[m[32mshopt -s histappend[m
+[32m+[m
+[32m+[m[32m# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)[m
+[32m+[m[32mHISTSIZE=1000[m
+[32m+[m[32mHISTFILESIZE=2000[m
+[32m+[m
+[32m+[m[32m# check the window size after each command and, if necessary,[m
+[32m+[m[32m# update the values of LINES and COLUMNS.[m
+[32m+[m[32mshopt -s checkwinsize[m
+[32m+[m
+[32m+[m[32m# make less more friendly for non-text input files, see lesspipe(1)[m
+[32m+[m[32m[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"[m
+[32m+[m
+[32m+[m[32m# set variable identifying the chroot you work in (used in the prompt below)[m
+[32m+[m[32mif [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then[m
+[32m+[m[32m    debian_chroot=$(cat /etc/debian_chroot)[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# set a fancy prompt (non-color, unless we know we "want" color)[m
+[32m+[m[32mcase "$TERM" in[m
+[32m+[m[32m    xterm-color) color_prompt=yes;;[m
+[32m+[m[32mesac[m
+[32m+[m
+[32m+[m[32m# uncomment for a colored prompt, if the terminal has the capability; turned[m
+[32m+[m[32m# off by default to not distract the user: the focus in a terminal window[m
+[32m+[m[32m# should be on the output of commands, not on the prompt[m
+[32m+[m[32m#force_color_prompt=yes[m
+[32m+[m
+[32m+[m[32mif [ -n "$force_color_prompt" ]; then[m
+[32m+[m[32m    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then[m
+[32m+[m	[32m# We have color support; assume it's compliant with Ecma-48[m
+[32m+[m	[32m# (ISO/IEC-6429). (Lack of such support is extremely rare, and such[m
+[32m+[m	[32m# a case would tend to support setf rather than setaf.)[m
+[32m+[m	[32mcolor_prompt=yes[m
+[32m+[m[32m    else[m
+[32m+[m	[32mcolor_prompt=[m
+[32m+[m[32m    fi[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mif [ "$color_prompt" = yes ]; then[m
+[32m+[m[32m    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '[m
+[32m+[m[32melse[m
+[32m+[m[32m    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '[m
+[32m+[m[32mfi[m
+[32m+[m[32munset color_prompt force_color_prompt[m
+[32m+[m
+[32m+[m[32m# If this is an xterm set the title to user@host:dir[m
+[32m+[m[32mcase "$TERM" in[m
+[32m+[m[32mxterm*|rxvt*)[m
+[32m+[m[32m    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"[m
+[32m+[m[32m    ;;[m
+[32m+[m[32m*)[m
+[32m+[m[32m    ;;[m
+[32m+[m[32mesac[m
+[32m+[m
+[32m+[m[32m# enable color support of ls and also add handy aliases[m
+[32m+[m[32mif [ -x /usr/bin/dircolors ]; then[m
+[32m+[m[32m    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"[m
+[32m+[m[32m    alias ls='ls --color=auto'[m
+[32m+[m[32m    #alias dir='dir --color=auto'[m
+[32m+[m[32m    #alias vdir='vdir --color=auto'[m
+[32m+[m
+[32m+[m[32m    alias grep='grep --color=auto'[m
+[32m+[m[32m    alias fgrep='fgrep --color=auto'[m
+[32m+[m[32m    alias egrep='egrep --color=auto'[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# some more ls aliases[m
+[32m+[m[32malias ll='ls -alF'[m
+[32m+[m[32malias la='ls -A'[m
+[32m+[m[32malias l='ls -CF'[m
+[32m+[m
+[32m+[m[32m# Alias definitions.[m
+[32m+[m[32m# You may want to put all your additions into a separate file like[m
+[32m+[m[32m# ~/.bash_aliases, instead of adding them here directly.[m
+[32m+[m[32m# See /usr/share/doc/bash-doc/examples in the bash-doc package.[m
+[32m+[m
+[32m+[m[32mif [ -f ~/.bash_aliases ]; then[m
+[32m+[m[32m    . ~/.bash_aliases[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# enable programmable completion features (you don't need to enable[m
+[32m+[m[32m# this, if it's already enabled in /etc/bash.bashrc and /etc/profile[m
+[32m+[m[32m# sources /etc/bash.bashrc).[m
+[32m+[m[32m#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then[m
+[32m+[m[32m#    . /etc/bash_completion[m
+[32m+[m[32m#fi[m
+[1mdiff --git a/.gnupg/pubring.kbx b/.gnupg/pubring.kbx[m
+[1mnew file mode 100644[m
+[1mindex 0000000..33d04ea[m
+Binary files /dev/null and b/.gnupg/pubring.kbx differ
+[1mdiff --git a/.lesshst b/.lesshst[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4d1c30b[m
+[1m--- /dev/null[m
+[1m+++ b/.lesshst[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m.less-history-file:[m
+[1mdiff --git a/.profile b/.profile[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c4c7402[m
+[1m--- /dev/null[m
+[1m+++ b/.profile[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32m# ~/.profile: executed by Bourne-compatible login shells.[m
+[32m+[m
+[32m+[m[32mif [ "$BASH" ]; then[m
+[32m+[m[32m  if [ -f ~/.bashrc ]; then[m
+[32m+[m[32m    . ~/.bashrc[m
+[32m+[m[32m  fi[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mmesg n 2> /dev/null || true[m
+[1mdiff --git a/cp.sh b/cp.sh[m
+[1mnew file mode 100755[m
+[1mindex 0000000..b2714fd[m
+[1m--- /dev/null[m
+[1m+++ b/cp.sh[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m#!/bin/bash[m
+[32m+[m[32mcp -r /root/folder1/* /root/folder2/*[m
+[1mdiff --git a/demo b/demo[m
+[1mnew file mode 160000[m
+[1mindex 0000000..6c84735[m
+[1m--- /dev/null[m
+[1m+++ b/demo[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mSubproject commit 6c84735e92f0861f783897ad804c8e38ebbd4397[m
+[1mdiff --git a/folder1/1 b/folder1/1[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder1/2 b/folder1/2[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder1/3 b/folder1/3[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder1/4 b/folder1/4[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder1/5 b/folder1/5[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder2/10 b/folder2/10[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder2/6 b/folder2/6[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder2/7 b/folder2/7[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder2/8 b/folder2/8[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/folder2/9 b/folder2/9[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/gitfile/demo b/gitfile/demo[m
+[1mnew file mode 160000[m
+[1mindex 0000000..6c84735[m
+[1m--- /dev/null[m
+[1m+++ b/gitfile/demo[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mSubproject commit 6c84735e92f0861f783897ad804c8e38ebbd4397[m
+[1mdiff --git a/gitfile/vi.txt b/gitfile/vi.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..645d2cf[m
+[1m--- /dev/null[m
+[1m+++ b/gitfile/vi.txt[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mMy name is Shreyas Jadhav[m
+[1mdiff --git a/snap/firefox/current b/snap/firefox/current[m
+[1mnew file mode 120000[m
+[1mindex 0000000..f470309[m
+[1m--- /dev/null[m
+[1m+++ b/snap/firefox/current[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m2987[m
+\ No newline at end of file[m
+[1mdiff --git a/snap/snap-store/current b/snap/snap-store/current[m
+[1mnew file mode 120000[m
+[1mindex 0000000..a8a24cb[m
+[1m--- /dev/null[m
+[1m+++ b/snap/snap-store/current[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m959[m
+\ No newline at end of file[m
+[1mdiff --git a/snap/snapd-desktop-integration/current b/snap/snapd-desktop-integration/current[m
+[1mnew file mode 120000[m
+[1mindex 0000000..24af08a[m
+[1m--- /dev/null[m
+[1m+++ b/snap/snapd-desktop-integration/current[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m83[m
+\ No newline at end of file[m
+[1mdiff --git a/touch b/touch[m
+[1mnew file mode 100644[m
+[1mindex 0000000..30db57a[m
+[1m--- /dev/null[m
+[1m+++ b/touch[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mpranav[m
+[1mdiff --git a/vboxpostinstall.sh b/vboxpostinstall.sh[m
+[1mnew file mode 100755[m
+[1mindex 0000000..93281b9[m
+[1m--- /dev/null[m
+[1m+++ b/vboxpostinstall.sh[m
+[36m@@ -0,0 +1,257 @@[m
+[32m+[m[32m#!/bin/bash[m
+[32m+[m[32m## @file[m
+[32m+[m[32m# Post installation script template for debian-like distros.[m
+[32m+[m[32m#[m
+[32m+[m[32m# Note! This script expects to be running w/o chroot.[m
+[32m+[m[32m# Note! When using ubiquity, this is run after installation logs have[m
+[32m+[m[32m#       been copied to /var/log/installation.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Copyright (C) 2017-2023 Oracle and/or its affiliates.[m
+[32m+[m[32m#[m
+[32m+[m[32m# This file is part of VirtualBox base platform packages, as[m
+[32m+[m[32m# available from https://www.virtualbox.org.[m
+[32m+[m[32m#[m
+[32m+[m[32m# This program is free software; you can redistribute it and/or[m
+[32m+[m[32m# modify it under the terms of the GNU General Public License[m
+[32m+[m[32m# as published by the Free Software Foundation, in version 3 of the[m
+[32m+[m[32m# License.[m
+[32m+[m[32m#[m
+[32m+[m[32m# This program is distributed in the hope that it will be useful, but[m
+[32m+[m[32m# WITHOUT ANY WARRANTY; without even the implied warranty of[m
+[32m+[m[32m# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU[m
+[32m+[m[32m# General Public License for more details.[m
+[32m+[m[32m#[m
+[32m+[m[32m# You should have received a copy of the GNU General Public License[m
+[32m+[m[32m# along with this program; if not, see <https://www.gnu.org/licenses>.[m
+[32m+[m[32m#[m
+[32m+[m[32m# SPDX-License-Identifier: GPL-3.0-only[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Globals.[m
+[32m+[m[32m#[m
+[32m+[m[32mMY_TARGET="/target"[m
+[32m+[m[32mMY_LOGFILE="${MY_TARGET}/var/log/vboxpostinstall.log"[m
+[32m+[m[32mMY_CHROOT_CDROM="/cdrom"[m
+[32m+[m[32mMY_CDROM_NOCHROOT="/cdrom"[m
+[32m+[m[32mMY_EXITCODE=0[m
+[32m+[m[32mMY_DEBUG="" # "yes"[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Do we need to exec using target bash?  If so, we must do that early[m
+[32m+[m[32m# or ash will bark 'bad substitution' and fail.[m
+[32m+[m[32m#[m
+[32m+[m[32mif [ "$1" = "--need-target-bash" ]; then[m
+[32m+[m[32m    # Try figure out which directories we might need in the library path.[m
+[32m+[m[32m    if [ -z "${LD_LIBRARY_PATH}" ]; then[m
+[32m+[m[32m        LD_LIBRARY_PATH="${MY_TARGET}/lib"[m
+[32m+[m[32m    fi[m
+[32m+[m[32m    for x in \[m
+[32m+[m[32m        ${MY_TARGET}/lib \[m
+[32m+[m[32m        ${MY_TARGET}/usr/lib \[m
+[32m+[m[32m        ${MY_TARGET}/lib/*linux-gnu/ \[m
+[32m+[m[32m        ${MY_TARGET}/lib32/ \[m
+[32m+[m[32m        ${MY_TARGET}/lib64/ \[m
+[32m+[m[32m        ${MY_TARGET}/usr/lib/*linux-gnu/ \[m
+[32m+[m[32m        ${MY_TARGET}/usr/lib32/ \[m
+[32m+[m[32m        ${MY_TARGET}/usr/lib64/ \[m
+[32m+[m[32m        ;[m
+[32m+[m[32m    do[m
+[32m+[m[32m        if [ -e "$x" ]; then LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${x}"; fi;[m
+[32m+[m[32m    done[m
+[32m+[m[32m    export LD_LIBRARY_PATH[m
+[32m+[m
+[32m+[m[32m    # Append target bin directories to the PATH as busybox may not have tee.[m
+[32m+[m[32m    PATH="${PATH}:${MY_TARGET}/bin:${MY_TARGET}/usr/bin:${MY_TARGET}/sbin:${MY_TARGET}/usr/sbin"[m
+[32m+[m[32m    export PATH[m
+[32m+[m
+[32m+[m[32m    # Drop the --need-target-bash argument and re-exec.[m
+[32m+[m[32m    shift[m
+[32m+[m[32m    echo "******************************************************************************" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    echo "** Relaunching using ${MY_TARGET}/bin/bash $0 $*" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    echo "**   LD_LIBRARY_PATH=${LD_LIBRARY_PATH}" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    echo "**              PATH=${PATH}" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    exec "${MY_TARGET}/bin/bash" "$0" "$@"[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Commands.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m[32m# Logs execution of a command.[m
+[32m+[m[32mlog_command()[m
+[32m+[m[32m{[m
+[32m+[m[32m    echo "--------------------------------------------------" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    echo "** Date:      `date -R`" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    echo "** Executing: $*" >> "${MY_LOGFILE}"[m
+[32m+[m[32m    "$@" 2>&1 | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    MY_TMP_EXITCODE="${PIPESTATUS[0]}"[m
+[32m+[m[32m    if [ "${MY_TMP_EXITCODE}" != "0" ]; then[m
+[32m+[m[32m        if [ "${MY_TMP_EXITCODE}" != "${MY_IGNORE_EXITCODE}" ]; then[m
+[32m+[m[32m            echo "** exit code: ${MY_TMP_EXITCODE}" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m            MY_EXITCODE=1;[m
+[32m+[m[32m        else[m
+[32m+[m[32m            echo "** exit code: ${MY_TMP_EXITCODE} (ignored)" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m        fi[m
+[32m+[m[32m    fi[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# Logs execution of a command inside the target.[m
+[32m+[m[32mlog_command_in_target()[m
+[32m+[m[32m{[m
+[32m+[m[32m    #[m
+[32m+[m[32m    # We should be using in-target here, however we don't get any stderr output[m
+[32m+[m[32m    # from it because of log-output. We can get stdout by --pass-stdout, but[m
+[32m+[m[32m    # that's not helpful for failures.[m
+[32m+[m[32m    #[m
+[32m+[m[32m    # So, we try do the chroot prepping that in-target does at the start of the[m
+[32m+[m[32m    # script (see below) and just use chroot here.[m
+[32m+[m[32m    #[m
+[32m+[m[32m    log_command chroot "${MY_TARGET}" "$@"[m
+[32m+[m[32m    # log_command in-target --pass-stdout "$@" # No stderr output... :-([m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m# Checks if $1 is a command on the PATH inside the target jail.[m
+[32m+[m[32mchroot_which()[m
+[32m+[m[32m{[m
+[32m+[m[32m    for dir in /bin /usr/bin /sbin /usr/sbin;[m
+[32m+[m[32m    do[m
+[32m+[m[32m        if [ -x "${MY_TARGET}${dir}/$1" ]; then[m
+[32m+[m[32m            return 0;[m
+[32m+[m[32m        fi[m
+[32m+[m[32m    done[m
+[32m+[m[32m    return 1;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Log header.[m
+[32m+[m[32m#[m
+[32m+[m[32mecho "******************************************************************************" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "** VirtualBox Unattended Guest Installation - Late installation actions" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "** Date:    `date -R`" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "** Started: $0 $*" >> "${MY_LOGFILE}"[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Setup the target jail ourselves since in-target steals all the output.[m
+[32m+[m[32m#[m
+[32m+[m[32mif [ -f /lib/chroot-setup.sh ]; then[m
+[32m+[m[32m    MY_HAVE_CHROOT_SETUP="yes"[m
+[32m+[m[32m    . /lib/chroot-setup.sh[m
+[32m+[m[32m    if chroot_setup; then[m
+[32m+[m[32m        echo "** chroot_setup: done" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    else[m
+[32m+[m[32m        echo "** chroot_setup: failed $?" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    fi[m
+[32m+[m[32melse[m
+[32m+[m[32m    MY_HAVE_CHROOT_SETUP=""[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# We want the ISO available inside the target jail.[m
+[32m+[m[32m#[m
+[32m+[m[32mif [ -d "${MY_TARGET}${MY_CHROOT_CDROM}" ]; then[m
+[32m+[m[32m    MY_RMDIR_TARGET_CDROM=[m
+[32m+[m[32melse[m
+[32m+[m[32m    MY_RMDIR_TARGET_CDROM="yes"[m
+[32m+[m[32m    log_command mkdir -p ${MY_TARGET}${MY_CHROOT_CDROM}[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mif [ -f "${MY_TARGET}${MY_CHROOT_CDROM}/vboxpostinstall.sh" ]; then[m
+[32m+[m[32m    MY_UNMOUNT_TARGET_CDROM=[m
+[32m+[m[32m    echo "** binding cdrom into jail: already done" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32melse[m
+[32m+[m[32m    MY_UNMOUNT_TARGET_CDROM="yes"[m
+[32m+[m[32m    log_command mount -o bind "${MY_CDROM_NOCHROOT}" "${MY_TARGET}${MY_CHROOT_CDROM}"[m
+[32m+[m[32m    if [ -f "${MY_TARGET}${MY_CHROOT_CDROM}/vboxpostinstall.sh" ]; then[m
+[32m+[m[32m        echo "** binding cdrom into jail: success"  | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    else[m
+[32m+[m[32m        echo "** binding cdrom into jail: failed"   | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    fi[m
+[32m+[m[32m    if [ "${MY_DEBUG}" = "yes" ]; then[m
+[32m+[m[32m        log_command find "${MY_TARGET}${MY_CHROOT_CDROM}"[m
+[32m+[m[32m    fi[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Debug[m
+[32m+[m[32m#[m
+[32m+[m[32mif [ "${MY_DEBUG}" = "yes" ]; then[m
+[32m+[m[32m    log_command id[m
+[32m+[m[32m    log_command ps[m
+[32m+[m[32m    log_command ps auxwwwf[m
+[32m+[m[32m    log_command env[m
+[32m+[m[32m    log_command df[m
+[32m+[m[32m    log_command mount[m
+[32m+[m[32m    log_command_in_target df[m
+[32m+[m[32m    log_command_in_target mount[m
+[32m+[m[32m    #log_command find /[m
+[32m+[m[32m    MY_EXITCODE=0[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Packages needed for GAs.[m
+[32m+[m[32m#[m
+[32m+[m[32mecho "--------------------------------------------------" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho '** Installing packages for building kernel modules...' | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32mlog_command_in_target apt-get -y install build-essential[m
+[32m+[m[32mlog_command_in_target apt-get -y install linux-headers-$(uname -r)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# GAs[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Test Execution Service.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Run user command.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Unmount the cdrom if we bound it and clean up the chroot if we set it up.[m
+[32m+[m[32m#[m
+[32m+[m[32mif [ -n "${MY_UNMOUNT_TARGET_CDROM}" ]; then[m
+[32m+[m[32m    echo "** unbinding cdrom from jail..." | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    log_command umount "${MY_TARGET}${MY_CHROOT_CDROM}"[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mif [ -n "${MY_RMDIR_TARGET_CDROM}" ]; then[m
+[32m+[m[32m    log_command rmdir "${MY_TARGET}${MY_CHROOT_CDROM}"[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mif [ -n "${MY_HAVE_CHROOT_SETUP}" ]; then[m
+[32m+[m[32m    if chroot_cleanup; then[m
+[32m+[m[32m        echo "** chroot_cleanup: done"      | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    else[m
+[32m+[m[32m        echo "** chroot_cleanup: failed $?" | tee -a "${MY_LOGFILE}"[m
+[32m+[m[32m    fi[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# Log footer.[m
+[32m+[m[32m#[m
+[32m+[m[32mecho "******************************************************************************" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "** Date:            `date -R`" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "** Final exit code: ${MY_EXITCODE}" >> "${MY_LOGFILE}"[m
+[32m+[m[32mecho "******************************************************************************" >> "${MY_LOGFILE}"[m
+[32m+[m
+[32m+[m[32mexit ${MY_EXITCODE}[m
+[32m+[m
