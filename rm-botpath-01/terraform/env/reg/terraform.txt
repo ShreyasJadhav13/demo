@@ -27,7 +27,7 @@ hostname         = "taxuw1gpreisu20"
  boot_disk_type = "pd-standard"
  boot_disk_size = "100"
  
-boot_image_name = "reg"
+boot_image_name = "shreyas"
  boot_image_project = "clgx-imgfact-repo-glb-prd-f2a0"
  
  network               = "clgx-vpc-prd"
