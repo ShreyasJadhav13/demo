@@ -57,3 +57,4 @@ labels = {
  instance_technology = "compute-instance"
  mig_technology      = "umig"
  lb_technology       = "load-balancer"
+
